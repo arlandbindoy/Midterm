@@ -1,0 +1,38 @@
+* {
+    padding:  0;
+    margin: 10;
+    font-family: sans-serif;
+}
+
+body {
+    background: url('/static/images/log');
+    background-size: cover;
+}
+
+.login-form {
+    width: 350px;
+    top: 40%;
+    left: 55%;
+    transform: translate(-50%, -55%);
+    position: absolute;
+}
+button{
+    background-color: black; 
+    width: 200px;
+    top: 130%;
+    left: 30%;
+    transform: translate(-50%, -55%);
+    position: absolute;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+    border-radius: 8px;
+  }      

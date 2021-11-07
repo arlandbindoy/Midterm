@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="with=device-widt",initial-scale=1.0>
+        <link rel="stylesheet" href="{{ url_for('static',filename='home.css') }}">
+        <title>Home</title>
+    </head>
+    <body>
+        <form method="POST" action="/result">        </form>
+        <section class="header">
+            <div class="textbox">
+                <h1>Design of a Controlled Environment<br> for the Snail Farm with<br> Mobile Application</h1>
+                <p>This project intends to have a controlled environment for the snail farms. To be able to <br>control the temperature that affects the growth of the snails and monitor the snail growth.</p>
+               <a href="{{ url_for('result') }}">
+                <button type="submit" class = "button1"><span>About Us</span></button></a>
+
+                <br>
+                <a href="{{ url_for('login') }}">
+                <button type="submit" class = "button2"><span>logout</span></button>
+                </a>
+            </div>
+<!-------Objectives------>
+        </section>
+        <section class="object">
+            <div class="ob">
+            <h1>Objectives</h1>
+            <p>This project intends to have a controlled environment for the snail farms. <br>To be able to control the temperature that affects the growth of the snails and monitor the snail growth.</p>
+            </div>
+            <div class="fact">
+            <h1>Facts</h1>
+            </div>
+            <div class="row">
+                
+                <div class="obj-col">
+                    <h3>Weather affect Snail growth</h3>
+                    <p>Snails prefer cool, dark environments, so keep the tank in a place out of direct light. Placing the tank away from sunlight helps to maintain the temperature of the habitat and prevents your snails from getting too hot, becoming dry or dehydrated, and dying.</p>
+                </div>
+                <div class="obj-col">
+                    <h3>Good Source of Protein</h3>
+                    <p>Snail farming provides a cheap source of high quality animal protein for human consumption. Snail is a white meat therefore very healthy for consumption. Starting a snail farm requires relatively low startup capital compared to other forms of animal farming</p>
+                </div>
+                <div class="obj-col">
+                    <h3>Huge Market Potential</h3>
+                    <p> heliculture (snail farming) value chain holds so many opportunities yet to be properly harnessed. Also, some farmers said there is a high demand for the African giant land snail species domestically and overseas because of the huge health benefits derived from its flesh and raw materials (such as shells and slime).</p>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

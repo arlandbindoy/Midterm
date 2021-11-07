@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="with=device-widt",initial-scale=1.0>
+        <link rel="stylesheet" href="{{ url_for('static',filename='info.css') }}">
+        <title>results</title>
+    </head>
+    <body>
+        <form method="POST" action="/home"></form>
+        <section class="header"> 
+            <div class="text-box">
+            <h1>About Us</h1>
+            <div class="row">
+                <div class="aboutus-col">
+                    <img src="static/images/Bindoy.jpg">
+                    <h3>Arland Bindoy</h3>
+                    <p>System Administration</p>
+                </div>
+                <div class="aboutus-col">
+                    <img src="static/images/Cristal.png">
+                    <h3>Albert Cristal</h3>
+                    <p>Railway</p>
+                </div>
+                <div class="aboutus-col">
+                    <img src="static/images/Hernandez.jpg">
+                    <h3>Brenda Hernandez</h3>
+                    <p>System Administration</p>
+                </div>
+                <div class="aboutus-col">
+                    <img src="static/images/Moreno.jpg">
+                    <h3>Jan Patrick Moreno</h3>
+                    <p>System Administration</p>
+                </div>
+
+        </div>
+        <a href="{{ url_for('home') }}">
+            <button type="button" class = "btn-about"><span>Back</span></button>
+        </a>
+        </section>
+    </body>
+</html>
