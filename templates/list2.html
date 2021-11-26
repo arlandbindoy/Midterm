@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <meta name="viewport" content="with=device-widt",initial-scale=1.0>
+        <link rel="stylesheet" href="{{ url_for('static',filename='list.css') }}">
+        <title>Result</title>
+    </head>
+    <body>
+        <form action="/home">
+        <h1>{{msg}}</h1>
+        <a href="{{ url_for('home') }}"><Button class="button1">Back</Button></a>
+        </form>
+    </body>
+</html>

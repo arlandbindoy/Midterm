@@ -36,7 +36,7 @@ opacity: .95;
 /* Start form  attributes */
 form {
     width: 450px;
-    min-height: 500px;
+    min-height: 50px;
     height: auto;
     border-radius: 5px;
     margin: 2% auto;
@@ -169,7 +169,9 @@ button {
 .frgt-pass {background: transparent;}
 
 /*     Sign Up button  */
-.sign-up {background: #B8F2E6;}
+.sign-up {
+    background: #B8F2E6;
+}
 
 
 /* buttons hover */

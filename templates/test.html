@@ -28,8 +28,7 @@
                    <i class="fa fa-user-circle"></i>
                  </span>
                 <!--   user name Input-->
-                 <input class="form-input" id="txt-input" type="text" placeholder="@UserName" required>
-             
+                 <input class="form-input" id="username" name="username" type="text" placeholder="@UserName" required>
               <br>
              
                    <!--   Password -->
@@ -38,7 +37,7 @@
                 <i class="fa fa-key"></i>
                </span>
               <!--   Password Input-->
-              <input class="form-input" type="password" placeholder="Password" id="pwd"  name="password" required>
+              <input class="form-input" type="password" placeholder="Password" id="password"  name="password" required>
              
         <!--      Show/hide password  -->
              <span>
@@ -52,24 +51,24 @@
         <a href="{{ url_for('home') }}"><button class="log-in"> Log In </button></a>
 
            </div>
+         </form>
           
         <!--   other buttons -->
-           <div class="other">
+         <form action="/registration" method="POST">
+         <div class="other">
         <!--      Forgot Password button-->
-              <button class="btn submits frgt-pass">Forgot Password</button>
         <!--     Sign Up button -->
-              <button class="btn submits sign-up">Sign Up 
+              <a href="{{ url_for('home') }}"><button class="btn submits sign-up">Sign Up 
         <!--         Sign Up font icon -->
               <i class="fa fa-user-plus" aria-hidden="true"></i>
-              </button>
+              </button></a>
         <!--      End Other the Division -->
            </div>
-             
+           </form>             
         <!--   End Conrainer  -->
           </div>
           
           <!-- End Form -->
-        </form>
         </div>
 </body>
 </html>

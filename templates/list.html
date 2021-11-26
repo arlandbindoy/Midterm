@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <meta name="viewport" content="with=device-widt",initial-scale=1.0>
+        <link rel="stylesheet" href="{{ url_for('static',filename='list.css') }}">
+    <title>Registration Table</title>
+    </head>
+    <body>
+        <form action="/home" method="POST">
+        <h1>Registration Table</h1>
+        <table border="2">
+            <thead>
+                <td>Username</td>
+                <td>Email</td>
+                
+            </thead>
+            {% for row in rows %}
+            <tr>
+                <td>{{row['Username']}}</td>
+                <td>{{row['Email']}}</td>
+                
+            </tr>
+            {% endfor %}
+        </table><br>
+        <a href="{{ url_for('home') }}"><button>Back</button></a>
+        </form>
+        <form action="/list/delete" method="POST">
+        <input type="text" placeholder="Delete an Account" name="delete" id="delete">   
+        <a href="{{ url_for('delete') }}"><button>Delete</button></a>
+    </form>
+    </body>
+</html>
