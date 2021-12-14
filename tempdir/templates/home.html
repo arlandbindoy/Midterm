@@ -6,7 +6,7 @@
         <title>Home</title>
     </head>
     <body>
-        <form method="POST" action="/result">        </form>
+        <form method="POST">        </form>
         <section class="header">
             <div class="textbox">
                 <h1>Design of a Controlled Environment<br> for the Snail Farm with<br> Mobile Application</h1>
@@ -17,7 +17,9 @@
                 <br>
                 <a href="{{ url_for('login') }}">
                 <button type="submit" class = "button2"><span>logout</span></button>
-                </a>
+                </a><br>
+                <a href="{{ url_for('list') }}">
+                    <button type="submit" class = "button3">Registration Table</button></a>
             </div>
 <!-------Objectives------>
         </section>

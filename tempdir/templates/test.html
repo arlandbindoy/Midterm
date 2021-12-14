@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test</title>
     <link rel="stylesheet" href="{{ url_for('static',filename='test.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
     <div class="overlay">
         <!-- LOGN IN FORM by Omar Dsoky -->
-        <form action="/home" method="POST">
            <!--   con = Container  for items in the form-->
            <div class="con">
            <!--     Start  header Content  -->
@@ -28,8 +28,7 @@
                    <i class="fa fa-user-circle"></i>
                  </span>
                 <!--   user name Input-->
-                 <input class="form-input" id="txt-input" type="text" placeholder="@UserName" required>
-             
+                 <input class="form-input" id="username" name="username" type="text" placeholder="@UserName" required>
               <br>
              
                    <!--   Password -->
@@ -38,7 +37,7 @@
                 <i class="fa fa-key"></i>
                </span>
               <!--   Password Input-->
-              <input class="form-input" type="password" placeholder="Password" id="pwd"  name="password" required>
+              <input class="form-input" type="password" placeholder="Password" id="password"  name="password" required>
              
         <!--      Show/hide password  -->
              <span>
@@ -49,27 +48,58 @@
               <br>
         <!--        buttons -->
         <!--      button LogIn -->
-        <a href="{{ url_for('home') }}"><button class="log-in"> Log In </button></a>
+        <button class="log-in" onclick="logSumit();"> Log In </button>
 
            </div>
           
         <!--   other buttons -->
-           <div class="other">
+         <form action="/registration" method="POST">
+         <div class="other">
         <!--      Forgot Password button-->
-              <button class="btn submits frgt-pass">Forgot Password</button>
         <!--     Sign Up button -->
-              <button class="btn submits sign-up">Sign Up 
+              <a href="{{ url_for('home') }}"><button class="btn submits sign-up">Sign Up 
         <!--         Sign Up font icon -->
               <i class="fa fa-user-plus" aria-hidden="true"></i>
-              </button>
+              </button></a>
         <!--      End Other the Division -->
            </div>
-             
+           </form>             
         <!--   End Conrainer  -->
           </div>
           
           <!-- End Form -->
-        </form>
         </div>
 </body>
 </html>
+<script>
+   function logSumit(){
+       var message;
+       var user_name = document.getElementById("username").value;
+       var user_password = document.getElementById("password").value;
+ 
+       var data = [
+           {"username": user_name,
+           "password": user_password}
+       ];
+ 
+       $.ajax({
+       type: "POST",
+       url: "/success",
+       data: JSON.stringify(data),
+       contentType: "application/json",
+       dataType: 'json',
+       success: function(result) {
+           message = result.message;
+           //console.log(message);
+           if(message == "Successfully Login"){
+               alert("login Successful")   
+               window.location.href="/home";
+          }
+          else{
+            alert("login Unsuccessful")
+           window.location.href="/";
+          }
+       } 
+       });
+   }
+ </script>
